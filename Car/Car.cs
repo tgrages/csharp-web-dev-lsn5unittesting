@@ -40,5 +40,14 @@
             Odometer += milesAbleToTravel;
         }
 
+        public void AddGas(double gas)
+        {
+            GasTankLevel += gas;
+            if (GasTankLevel > GasTankSize)
+            {
+                throw new System.ArgumentOutOfRangeException("Can't exceed tank size");
+            }
+        }
+
     }
 }
